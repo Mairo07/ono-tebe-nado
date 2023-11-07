@@ -28,7 +28,7 @@
   text-decoration: none;
 }
 
-.header__logo-image{
+.header__logo-image {
   width: auto;
   height: 105px;
 }
@@ -261,7 +261,7 @@
   font-size: 18px;
 }
 
-.footer__menu-list{
+.footer__menu-list {
   justify-self: center;
   text-align: center;
   list-style: none;
