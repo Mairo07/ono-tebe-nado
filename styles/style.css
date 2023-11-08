@@ -16,13 +16,17 @@
   list-style-type: circle;
 }
 
-.header__link-list-item:first-child {
+/* убираем маркер списка перед первым элементом */
+
+.header__links-list-item_no-bullit {
   list-style-type: none;
 }
 
 .header__link {
   text-underline-offset: 4px;
 }
+
+/* убираем подчеркивание у активной ссылки */
 
 .header__link_active {
   text-decoration: none;
@@ -34,7 +38,7 @@
 }
 
 .address {
-  width: 240px;
+  max-width: 240px;
   font-style: normal;
   line-height: 1.35;
   text-underline-offset: 4px;
@@ -46,9 +50,10 @@
 
 .cover {
   position: relative;
-  z-index: -2;
+  z-index: 0;
   padding: 165px 50px 50px;
   background-image: url("../images/cover.jpg");
+  background-position: center;
   background-size: cover;
 }
 
@@ -62,6 +67,9 @@
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   color: #fff;
   font-weight: 700;
   font-size: 100px;
@@ -72,13 +80,11 @@
 
 .aligned-text {
   display: block;
-  margin-bottom: 20px;
   line-height: 1.15;
 }
 
 .aligned-text_center {
   display: block;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -113,9 +119,10 @@
 }
 
 .bet-button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 12px 32px;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 22px;
   text-transform: uppercase;
@@ -166,21 +173,20 @@
   gap: 30px;
   height: 100%;
   padding: 50px 40px;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
 }
 
 .card__tile {
@@ -281,12 +287,11 @@
   display: flex;
   justify-self: end;
   justify-content: space-between;
-  width: 240px;
-  height: 48px;
+  gap: 48px;
   list-style: none;
 }
 
 .footer__social-icon {
-  width: auto;
+  width: 48px;
   height: 48px;
 }
